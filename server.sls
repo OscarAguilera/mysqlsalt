@@ -13,7 +13,7 @@
 # {% ... %}: Statements
 # {{ ... }}: Expressions; in Salt, this is how we call variables
 # {# ... #}: Comments
-{% if grains['os_family'] == 'Dbian' %}
+{% if grains['os_family'] == 'Debian' %}
 
 mysql_debconf_install:
   pkg.installed:
