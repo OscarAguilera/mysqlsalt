@@ -1,0 +1,9 @@
+{% set mysqlsalt = salt['grains.filter_by']({
+  'Debian':{
+    'server': 'mysql-server',
+  },
+  'RedHat':{
+    'server': 'mariadb-server',
+  },
+
+})%}

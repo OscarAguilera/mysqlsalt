@@ -1,3 +1,4 @@
+{% from "mysqlsalt/map.jinja" import mysqlsalt with context %}
 {% if grains['os_family'] == 'Debian' %}
 
 mysql_debconf_install:
@@ -18,5 +19,5 @@ mysql_debconf_settings:
 
 mysql_server_install:
   pkg.installed:
-    - name: mysql-server
-    #- name: mariadb-server using the ubuntu installer to test
+    - name: {{mysqlsalt.server}}
+    
