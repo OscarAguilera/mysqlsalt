@@ -1,9 +1,7 @@
-#This state will restart the mariadb if any change is detected on the mysql_server_config state
-#that modify the file that we have destinated and will wait till the restart complete to show
-# to the master the output
+{% from "mysqlsalt/map.jinja" import mysqlsalt with context %}
 mysql_restart:
   module.wait:
     - name: service.restart
-    - m_name: mariadb
+    - m_name: {{ mysqlsalt.service}}
     - watch:
       - mysql_server_config

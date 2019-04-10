@@ -1,4 +1,4 @@
-{% from "mysqlsalt/map.jinja" import with context %}
+{% from "mysqlsalt/map.jinja" import mysqlsalt with context %}
 include:
   - mysqlsalt.restart
 
