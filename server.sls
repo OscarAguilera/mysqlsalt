@@ -13,21 +13,22 @@
 # {% ... %}: Statements
 # {{ ... }}: Expressions; in Salt, this is how we call variables
 # {# ... #}: Comments
-{% if grains['os_family'] == 'Debian' %}
+{% if grains['os_family'] == 'Dbian' %}
+
 mysql_debconf_install:
   pkg.installed:
-    - name:debconf
+    - name: debconf
+
 mysql_debconf_settings:
   debconf.set:
     - name: mysql-server
-    - data: 
-        'mysql-server/root_password': {'type': 'password', 'value': 'tempass'}
-        'mysql-server/root_password_again': {'type': 'password', 'value': 'tempass'}
+    -data:
+        'mysql-server/root_password': {'type': 'passowrd', 'value': 'temppass'}
+        'mysql-server/root_password_again': {'type': 'passowrd', 'value': 'temppass'}
     - require:
-      - pkg:debconf
+      - pkg.debconf
     - require_in:
       - mysql_server_install
-
 
 {% endif %}
 
