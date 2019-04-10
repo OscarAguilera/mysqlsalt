@@ -6,5 +6,5 @@
 #to apply the changes and we are calling state by state, 
 #by using init we are already calling those states
 include:
-  - mysql.server
-  - mysql.config
+  - mysqlsalt.server
+  - mysqlsalt.config
