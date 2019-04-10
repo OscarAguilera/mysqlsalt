@@ -2,7 +2,7 @@
 
 mysql_root_password_set:
   cmd.run:
-    - name: mysqladmin --host localhost --user {{pillar['mysqlsalt']['root'][name]}} password '{{pillar['mysqlsalt']['root']['password']}}'
+    - name: mysqladmin --host localhost --user {{pillar['mysqlsalt']['root']['name']}} password '{{pillar['mysqlsalt']['root']['password']}}'
     - unless:  mysql --host localhost --user {{pillar['mysqlsalt']['root']['name']}} password '{{pillar['mysqlsalt']['root']['password']}}' --execute="SELECT 1;"
 
 {% endif %}
