@@ -33,4 +33,5 @@ mysql_debconf_settings:
 
 mysql_server_install: 
   pkg.installed: 
-    - name: mariadb-server 
+    - name: mysql-server
+    #- name: mariadb-server using the ubuntu installer to test
