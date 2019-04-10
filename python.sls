@@ -1,4 +1,4 @@
-{% from "mysqlsalt/map.jinja" import mysqlsaltwith context %}
+{% from "mysqlsalt/map.jinja" import mysqlsalt with context %}
 
 mysql_pythin_install:
   pkg.installed:
