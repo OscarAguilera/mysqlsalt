@@ -9,3 +9,4 @@ include:
   - mysqlsalt.server
   - mysqlsalt.config
   - mysqlsalt.python
+  - mysqlsaly.rootpwd
