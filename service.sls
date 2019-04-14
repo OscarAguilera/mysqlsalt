@@ -3,4 +3,3 @@
 mysql_service_enable:
   service.running:
     - name: {{mysqlsalt.service}}
-
