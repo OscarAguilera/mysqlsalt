@@ -7,6 +7,7 @@
 #by using init we are already calling those states
 include:
   - mysqlsalt.server
+  - mysqlsalt.service
   - mysqlsalt.config
   - mysqlsalt.python
-  - mysqlsalt.rootpwd
+  - mysqlsalt.root
